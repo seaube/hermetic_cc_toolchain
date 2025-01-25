@@ -10,7 +10,7 @@ _COMMON_EXEC_PLATFORMS = [
 
 def _toolchains_impl(ctx):
     for os, arch in _COMMON_EXEC_PLATFORMS:
-        zig_toolchains(exec_os = os, exec_arch = arch)
+        zig_toolchains(exec_os = os, exec_arch = arch, version = "0.14.0-dev.2851+b074fb7dd")
 
     host_zig_repository(name = "zig_sdk")
     return ctx.extension_metadata(
